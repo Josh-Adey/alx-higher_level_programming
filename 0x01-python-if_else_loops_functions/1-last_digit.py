@@ -2,9 +2,10 @@
 import random
 number = random.randint(-10000, 10000)
 
-num_str = repr(number)
-last_digit_str = num_str[-1]
-last_digit = int(last_digit_str)
+if number >= 0:
+    last_digit = number % 10
+elif number < 0:
+    last_digit = number % -10
 
 if last_digit > 5:
     string = 'Last digit of {0} is {1} and is greater 5'
