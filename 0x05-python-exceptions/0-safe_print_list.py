@@ -1,17 +1,14 @@
-#/usr/bin/python3
-
-
+#!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    idx = 0
+    count = 0
 
-    try:
-        for i in my_list:
-            if idx < x:
-                print('{}'.format(my_list[idx]), end='')
-                idx +=1
+    for i in range(x):
+        try:
+            print("{}".format(my_list[i]), end='')
+        except:
+            break
+        else:
+            count += 1
 
-        print()
-    except TypeError:
-        pass
-    finally:
-        return idx
+    print()
+    return (count)
