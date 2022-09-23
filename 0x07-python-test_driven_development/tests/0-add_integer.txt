@@ -24,18 +24,21 @@ Checking regular addition:
 Adding positive and negative numbers:
                    >>> add_integer(100, -2)
                    98
+
 Adding int and float:
                    >>> add_integer(2, 66.455)
                    68
+
 Adding float and int:
                    >>> add_integer(100.3, -2)
                    98
+
 Adding two floats:
                   >>> add_integer(2.33, 9.3)
                   11
+
 Checking for passed NaN:
-                  >>> add_integer(1, float('inf'))
+                  >>> add_integer(1, float('nan'))
                   Traceback (most recent call last):
                   ...
                   ValueError: cannot convert float NaN to integer
-
